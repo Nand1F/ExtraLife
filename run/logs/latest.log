@@ -1,0 +1,60 @@
+[17Jan2026 19:31:59.950] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\zirnz\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.13, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, mixins.extralife.json]
+[17Jan2026 19:31:59.960] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.17 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[17Jan2026 19:32:00.214] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[17Jan2026 19:32:00.286] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[17Jan2026 19:32:00.406] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[17Jan2026 19:32:00.468] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/zirnz/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[17Jan2026 19:32:00.524] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 5070/PCIe/SSE2 GL version 4.6.0 NVIDIA 591.74, NVIDIA Corporation
+[17Jan2026 19:32:00.796] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zirnz\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.13\cf01e2179f72bd2829c65f5226d7dd0cfb6c686\javafmllanguage-1.20.1-47.4.13.jar is missing mods.toml file
+[17Jan2026 19:32:00.798] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zirnz\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.13\e3f96129ea14eba84316f2d69816253e228e6e4c\lowcodelanguage-1.20.1-47.4.13.jar is missing mods.toml file
+[17Jan2026 19:32:00.798] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zirnz\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.13\85796906112d9b621a7b2996f8bfda49da991ef0\mclanguage-1.20.1-47.4.13.jar is missing mods.toml file
+[17Jan2026 19:32:00.801] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zirnz\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.13\f77e3021d1eb31d61f8d1b92d18ed4fb3c2806e5\fmlcore-1.20.1-47.4.13.jar is missing mods.toml file
+[17Jan2026 19:32:00.910] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[17Jan2026 19:32:02.124] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by mixins.extralife.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[17Jan2026 19:32:02.124] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[17Jan2026 19:32:02.126] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\zirnz\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[17Jan2026 19:32:02.186] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[17Jan2026 19:32:02.186] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[17Jan2026 19:32:02.196] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[17Jan2026 19:32:02.196] [main/INFO] [mixin/]: Selecting config mixins.extralife.json
+[17Jan2026 19:32:02.200] [main/WARN] [mixin/]: Reference map 'mixins.extralife.refmap.json' for mixins.extralife.json could not be read. If this is a development environment you can ignore this message
+[17Jan2026 19:32:02.202] [main/INFO] [mixin/]: Preparing mixins.extralife.json (2)
+[17Jan2026 19:32:05.762] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 135 milliseconds
+[17Jan2026 19:32:06.332] [pool-4-thread-1/INFO] [mixin/]: Mixing ServerGamePacketListenerImplMixin from mixins.extralife.json into net.minecraft.server.network.ServerGamePacketListenerImpl
+[17Jan2026 19:32:06.334] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$redirectHardcoreRespawn$1(Lnand1/extralife/capability/IHardcoreLives;)Ljava/lang/Boolean; to md49b22a$lambda$redirectHardcoreRespawn$1$0 in mixins.extralife.json:ServerGamePacketListenerImplMixin
+[17Jan2026 19:32:06.336] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$redirectHardcoreRespawn$0(Lnet/minecraft/server/level/ServerPlayer;Lnand1/extralife/capability/IHardcoreLives;)V to md49b22a$lambda$redirectHardcoreRespawn$0$1 in mixins.extralife.json:ServerGamePacketListenerImplMixin
+[17Jan2026 19:32:07.379] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/zirnz/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.13_mapped_official_1.20.1/forge-1.20.1-47.4.13_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[17Jan2026 19:32:07.379] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/zirnz/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.13_mapped_official_1.20.1/forge-1.20.1-47.4.13_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[17Jan2026 19:32:07.407] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17Jan2026 19:32:07.419] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[17Jan2026 19:32:07.512] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[17Jan2026 19:32:07.771] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.13, for MC 1.20.1 with MCP 20230612.114412
+[17Jan2026 19:32:07.771] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.13 Initialized
+[17Jan2026 19:32:08.399] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [extralife]
+[17Jan2026 19:32:08.553] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[17Jan2026 19:32:08.773] [Worker-Main-24/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[17Jan2026 19:32:08.830] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[17Jan2026 19:32:08.927] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[17Jan2026 19:32:09.075] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Shutdown failure!
+java.util.ConcurrentModificationException: null
+	at java.util.HashMap.forEach(HashMap.java:1424) ~[?:?]
+	at net.minecraft.client.renderer.texture.TextureManager.close(TextureManager.java:178) ~[forge-1.20.1-47.4.13_mapped_official_1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.close(Minecraft.java:1070) ~[forge-1.20.1-47.4.13_mapped_official_1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.destroy(Minecraft.java:1043) ~[forge-1.20.1-47.4.13_mapped_official_1.20.1-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:234) ~[forge-1.20.1-47.4.13_mapped_official_1.20.1-recomp.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.13.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.13.jar:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.4.13.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.4.13.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]

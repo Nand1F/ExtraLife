@@ -1,0 +1,24 @@
+{
+  "mappings": {
+    "nand1/extralife/mixin/ClientPacketListenerMixin": {
+      "handlePlayerCombatKill": "Lnet/minecraft/client/multiplayer/ClientPacketListener;m_142747_(Lnet/minecraft/network/protocol/game/ClientboundPlayerCombatKillPacket;)V",
+      "Lnet/minecraft/client/Minecraft;setScreen(Lnet/minecraft/client/gui/screens/Screen;)V": "Lnet/minecraft/client/Minecraft;m_91152_(Lnet/minecraft/client/gui/screens/Screen;)V"
+    },
+    "nand1/extralife/mixin/ServerGamePacketListenerImplMixin": {
+      "handleClientCommand": "Lnet/minecraft/server/network/ServerGamePacketListenerImpl;m_6272_(Lnet/minecraft/network/protocol/game/ServerboundClientCommandPacket;)V",
+      "Lnet/minecraft/server/MinecraftServer;isHardcore()Z": "Lnet/minecraft/server/MinecraftServer;m_7035_()Z"
+    }
+  },
+  "data": {
+    "searge": {
+      "nand1/extralife/mixin/ClientPacketListenerMixin": {
+        "handlePlayerCombatKill": "Lnet/minecraft/client/multiplayer/ClientPacketListener;m_142747_(Lnet/minecraft/network/protocol/game/ClientboundPlayerCombatKillPacket;)V",
+        "Lnet/minecraft/client/Minecraft;setScreen(Lnet/minecraft/client/gui/screens/Screen;)V": "Lnet/minecraft/client/Minecraft;m_91152_(Lnet/minecraft/client/gui/screens/Screen;)V"
+      },
+      "nand1/extralife/mixin/ServerGamePacketListenerImplMixin": {
+        "handleClientCommand": "Lnet/minecraft/server/network/ServerGamePacketListenerImpl;m_6272_(Lnet/minecraft/network/protocol/game/ServerboundClientCommandPacket;)V",
+        "Lnet/minecraft/server/MinecraftServer;isHardcore()Z": "Lnet/minecraft/server/MinecraftServer;m_7035_()Z"
+      }
+    }
+  }
+}

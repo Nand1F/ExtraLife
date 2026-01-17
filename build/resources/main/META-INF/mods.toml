@@ -1,0 +1,26 @@
+
+modLoader = "javafml" #
+loaderVersion = "[47,)"
+license = "All Rights Reserved"
+
+[[mods]] #
+modId = "extralife" #
+version = "1.0-SNAPSHOT"
+displayName = "ExtraLife" #
+authors = "Nand1" #
+description = '''Adds limited lives to Hardcore mode'''
+
+
+[[dependencies."extralife"]] #
+modId = "forge" #
+mandatory = true #
+versionRange = "[47,)" #
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."extralife"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,1.21)"
+ordering = "NONE"
+side = "BOTH"
