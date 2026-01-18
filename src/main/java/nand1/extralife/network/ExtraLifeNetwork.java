@@ -10,7 +10,7 @@ public class ExtraLifeNetwork {
     private static final String PROTOCOL = "1";
 
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
-            ResourceLocation.fromNamespaceAndPath(ExtraLife.MOD_ID, "main"),
+           new ResourceLocation(ExtraLife.MOD_ID, "main"),
             () -> PROTOCOL,
             PROTOCOL::equals,
             PROTOCOL::equals

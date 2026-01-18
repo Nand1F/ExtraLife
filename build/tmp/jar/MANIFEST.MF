@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Specification-Title: extralife
-Specification-Vendor: Nand1
+Specification-Vendor: 
 Specification-Version: 1
-Implementation-Title: untitled
-Implementation-Version: 1.0-SNAPSHOT
-Implementation-Vendor: Nand1
-Implementation-Timestamp: 2026-01-18T14:39:26+0100
+Implementation-Title: untitled1
+Implementation-Version: 1.20-1.1
+Implementation-Vendor: 
+Implementation-Timestamp: 2026-01-18T17:21:24+0100
 MixinConfigs: mixins.extralife.json
 

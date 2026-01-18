@@ -5328,11 +5328,8 @@ com/mojang/realmsclient/RealmsMainScreen com/mojang/realmsclient/RealmsMainScree
 		2 p_283564_ p_283564_
 		3 p_281543_ p_281543_
 		4 p_282977_ p_282977_
-	drawPopup (Lnet/minecraft/client/gui/GuiGraphics;IIF)V m_280475_
+	drawPopup (Lnet/minecraft/client/gui/GuiGraphics;)V m_280475_
 		0 p_283329_ p_283329_
-		1 p_290033_ p_290033_
-		2 p_290032_ p_290032_
-		3 p_290030_ p_290030_
 	getOwnedNonExpiredWorldIds ()Ljava/util/List; m_86330_
 	getSelectedServer ()Lcom/mojang/realmsclient/dto/RealmsServer; m_193481_
 	hasParentalConsent ()Z m_86321_
@@ -7936,8 +7933,10 @@ com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen com/mojang/realmsc
 		1 p_275628_ p_275628_
 	added ()V m_274333_
 	checkIfMcoEnabled ()V m_88850_
-	drawIcons (Lnet/minecraft/client/gui/GuiGraphics;)V m_280451_
+	drawIcons (Lnet/minecraft/client/gui/GuiGraphics;II)V m_280451_
 		0 p_282966_ p_282966_
+		1 p_283380_ p_283380_
+		2 p_283457_ p_283457_
 	getConfiguration ()Lcom/mojang/realmsclient/gui/screens/RealmsNotificationsScreen$DataFetcherConfiguration; m_274595_
 	getRealmsNotificationsEnabled ()Z m_88848_
 	inTitleScreen ()Z m_88849_
@@ -9292,7 +9291,7 @@ com/mojang/realmsclient/util/RealmsPersistence com/mojang/realmsclient/util/Real
 	<clinit> ()V <clinit>
 		static
 	<init> ()V <init>
-	getPathToData ()Ljava/nio/file/Path; m_90174_
+	getPathToData ()Ljava/io/File; m_90174_
 		static
 	read ()Lcom/mojang/realmsclient/util/RealmsPersistence$RealmsPersistenceData; m_167615_
 	readFile ()Lcom/mojang/realmsclient/util/RealmsPersistence$RealmsPersistenceData; m_90171_
@@ -24343,13 +24342,11 @@ net/minecraft/client/gui/screens/ConfirmScreen net/minecraft/client/gui/screens/
 	tick ()V m_86600_
 	titleTop ()I m_239963_
 net/minecraft/client/gui/screens/ConnectScreen net/minecraft/client/gui/screens/ConnectScreen
-	ABORT_CONNECTION f_290019_
 	LOGGER f_95683_
 	NARRATION_DELAY_MS f_169261_
 	UNIQUE_THREAD_ID f_95682_
 	UNKNOWN_HOST_MESSAGE f_169260_
 	aborted f_95685_
-	channelFuture f_290020_
 	connectFailedTitle f_278471_
 	connection f_95684_
 	lastNarration f_95688_
@@ -24365,7 +24362,7 @@ net/minecraft/client/gui/screens/ConnectScreen net/minecraft/client/gui/screens/
 		1 p_249536_ p_249536_
 		2 p_252078_ p_252078_
 	init ()V m_7856_
-	lambda$init$0 (Lnet/minecraft/client/gui/components/Button;)V m_290022_
+	lambda$init$0 (Lnet/minecraft/client/gui/components/Button;)V m_289586_
 		0 p_289624_ p_289624_
 	render (Lnet/minecraft/client/gui/GuiGraphics;IIF)V m_88315_
 		0 p_283201_ p_283201_
@@ -78764,7 +78761,6 @@ net/minecraft/network/Connection net/minecraft/network/Connection
 	averageReceivedPackets f_129476_
 	averageSentPackets f_129477_
 	channel f_129468_
-	delayedDisconnect f_290021_
 	disconnectedReason f_129471_
 	disconnectionHandled f_129473_
 	encrypted f_129472_
@@ -78793,11 +78789,6 @@ net/minecraft/network/Connection net/minecraft/network/Connection
 		static
 		0 p_265436_ p_265436_
 		1 p_265104_ p_265104_
-	connect (Ljava/net/InetSocketAddress;ZLnet/minecraft/network/Connection;)Lio/netty/channel/ChannelFuture; m_290025_
-		static
-		0 p_290034_ p_290034_
-		1 p_290035_ p_290035_
-		2 p_290031_ p_290031_
 	connectToLocalServer (Ljava/net/SocketAddress;)Lnet/minecraft/network/Connection; m_129493_
 		static
 		0 p_129494_ p_129494_
@@ -180950,11 +180941,10 @@ net/minecraft/world/level/chunk/ChunkStatus net/minecraft/world/level/chunk/Chun
 		0 p_285378_ p_285378_
 	isOrAfter (Lnet/minecraft/world/level/chunk/ChunkStatus;)Z m_62427_
 		0 p_62428_ p_62428_
-	lambda$generate$20 (Lnet/minecraft/world/level/chunk/ChunkAccess;)V m_290024_
-		0 p_290029_ p_290029_
-	lambda$generate$21 (Lnet/minecraft/util/profiling/jfr/callback/ProfiledDuration;Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Either; m_290023_
-		0 p_290027_ p_290027_
-		1 p_281217_ p_281217_
+	lambda$generate$20 (Lnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/util/profiling/jfr/callback/ProfiledDuration;Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Either; m_279983_
+		0 p_281215_ p_281215_
+		1 p_281216_ p_281216_
+		2 p_281217_ p_281217_
 	lambda$static$0 (Lnet/minecraft/world/level/chunk/ChunkStatus;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/server/level/ThreadedLevelLightEngine;Ljava/util/function/Function;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture; m_279980_
 		static
 		0 p_281194_ p_281194_

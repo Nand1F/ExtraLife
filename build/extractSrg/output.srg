@@ -100212,11 +100212,12 @@ dec net/minecraft/world/level/chunk/ChunkStatus
 		4 o p_289652_
 		5 o p_289679_
 		6 o p_289646_
-	a (Lbaw;Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Either; m_290023_
-		0 o p_290027_
-		1 o p_281217_
 	a ()Ljava/util/List; m_62349_
 		static
+	a (Lddx;Lbaw;Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Either; m_279983_
+		0 o p_281215_
+		1 o p_281216_
+		2 o p_281217_
 	a (Lddx;)Z m_284462_
 		static
 		0 o p_285378_
@@ -100304,8 +100305,6 @@ dec net/minecraft/world/level/chunk/ChunkStatus
 		0 o p_62398_
 	b (Ldec;)Z m_62427_
 		0 o p_62428_
-	b (Lddx;)V m_290024_
-		0 o p_290029_
 	b (Ldec;Laif;Lddy;Ljava/util/List;Lddx;)V m_279978_
 		static
 		0 o p_281188_
@@ -100313,6 +100312,9 @@ dec net/minecraft/world/level/chunk/ChunkStatus
 		2 o p_281190_
 		3 o p_281191_
 		4 o p_281192_
+	b (Lddx;)Lcom/mojang/datafixers/util/Either; m_279984_
+		static
+		0 o p_281218_
 	b (Ldec;Laif;Ldvu;Laii;Ljava/util/function/Function;Lddx;)Ljava/util/concurrent/CompletableFuture; m_284112_
 		static
 		0 o p_284898_
@@ -100354,9 +100356,9 @@ dec net/minecraft/world/level/chunk/ChunkStatus
 		2 o p_289525_
 		3 o p_289526_
 		4 o p_289527_
-	c (Lddx;)Lcom/mojang/datafixers/util/Either; m_279984_
+	c (Lddx;)Lcom/mojang/datafixers/util/Either; m_279979_
 		static
-		0 o p_281218_
+		0 o p_281193_
 	c (Ldec;Ljava/util/concurrent/Executor;Laif;Lddy;Ldvu;Laii;Ljava/util/function/Function;Ljava/util/List;Lddx;)Ljava/util/concurrent/CompletableFuture; m_279977_
 		static
 		0 o p_281179_
@@ -100377,9 +100379,6 @@ dec net/minecraft/world/level/chunk/ChunkStatus
 		3 o p_281212_
 		4 o p_281213_
 		5 o p_281214_
-	d (Lddx;)Lcom/mojang/datafixers/util/Either; m_279979_
-		static
-		0 o p_281193_
 	d (Ldec;Laif;Lddy;Ljava/util/List;Lddx;)V m_156246_
 		static
 		0 o p_156247_
@@ -136396,19 +136395,14 @@ eiu com/mojang/realmsclient/RealmsMainScreen
 	c (Lejq;)Z m_86594_
 		0 o p_86595_
 	c ()V m_264589_
-	c (Leox;)V m_86626_
-		0 o p_282133_
+	c (Leox;)V m_280475_
+		0 o p_283329_
 	c (Leox;IIII)V m_280129_
 		0 o p_281685_
 		1 o p_282388_
 		2 o p_282489_
 		3 o p_281732_
 		4 o p_283445_
-	c (Leox;IIF)V m_280475_
-		0 o p_283329_
-		1 o p_290033_
-		2 o p_290032_
-		3 o p_290030_
 	c (Ljava/util/List;)V m_273952_
 		0 o p_274622_
 	c (Lepi;)V m_86621_
@@ -136416,8 +136410,8 @@ eiu com/mojang/realmsclient/RealmsMainScreen
 	c (Leiu;)Lenn; m_167194_
 		static
 		0 o p_167195_
-	d (Leox;)V m_86601_
-		0 o p_282858_
+	d (Leox;)V m_86626_
+		0 o p_282133_
 	d (Lepi;)V m_86671_
 		0 o p_86672_
 	d (Ljava/util/List;)V m_275762_
@@ -136432,6 +136426,8 @@ eiu com/mojang/realmsclient/RealmsMainScreen
 		0 o p_86659_
 	e (Lejq;)Z m_86644_
 		0 o p_86645_
+	e (Leox;)V m_86601_
+		0 o p_282858_
 	e ()V m_272189_
 	e (Leiu;)Lenn; m_86582_
 		static
@@ -139096,6 +139092,10 @@ eli com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen
 		static
 		0 o p_238945_
 		1 o p_238946_
+	a (Leox;II)V m_280451_
+		0 o p_282966_
+		1 o p_283380_
+		2 o p_283457_
 	a (Leox;IIF)V m_88315_
 		0 o p_282587_
 		1 o p_282992_
@@ -139106,8 +139106,6 @@ eli com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen
 		0 o p_275619_
 		1 o p_275628_
 	b ()V m_7856_
-	c (Leox;)V m_280451_
-		0 o p_282966_
 	c (Ljava/util/List;)V m_273962_
 		static
 		0 o p_274637_
@@ -140493,7 +140491,7 @@ emd com/mojang/realmsclient/util/RealmsPersistence
 	b (Lemd$a;)V m_90172_
 		static
 		0 o p_90173_
-	c ()Ljava/nio/file/Path; m_90174_
+	c ()Ljava/io/File; m_90174_
 		static
 emd$a com/mojang/realmsclient/util/RealmsPersistence$RealmsPersistenceData
 	a f_90175_
@@ -151327,20 +151325,18 @@ etl net/minecraft/client/gui/screens/ConnectScreen
 	b f_95682_
 	c f_95683_
 	k f_169261_
-	l f_290019_
-	m f_95684_
-	n f_290020_
-	o f_95685_
-	p f_95686_
-	q f_95687_
-	r f_95688_
-	s f_278471_
+	l f_95684_
+	m f_95685_
+	n f_95686_
+	o f_95687_
+	p f_95688_
+	q f_278471_
 	<clinit> ()V <clinit>
 		static
 	<init> (Leuq;Lsw;)V <init>
 		0 o p_279215_
 		1 o p_279228_
-	a (Lepi;)V m_290022_
+	a (Lepi;)V m_289586_
 		0 o p_289624_
 	a (Lsw;)V m_95717_
 		0 o p_95718_
@@ -204832,7 +204828,6 @@ sd net/minecraft/network/Connection
 	v f_129477_
 	w f_129478_
 	x f_129479_
-	y f_290021_
 	<clinit> ()V <clinit>
 		static
 	<init> (Lup;)V <init>
@@ -204861,11 +204856,6 @@ sd net/minecraft/network/Connection
 		static
 		0 o p_265436_
 		1 o p_265104_
-	a (Ljava/net/InetSocketAddress;ZLsd;)Lio/netty/channel/ChannelFuture; m_290025_
-		static
-		0 o p_290034_
-		1 o p_290035_
-		2 o p_290031_
 	a (Ljavax/crypto/Cipher;Ljavax/crypto/Cipher;)V m_129495_
 		0 o p_129496_
 		1 o p_129497_
