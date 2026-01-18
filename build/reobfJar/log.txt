@@ -162,4 +162,8 @@ Writing Output: C:\Users\zirnz\Desktop\GunMod\ExtraLife\untitled\build\reobfJar\
   nand1/extralife/mixin/
   nand1/extralife/mixin/ClientPacketListenerMixin.class
   nand1/extralife/mixin/ServerGamePacketListenerImplMixin.class
+  nand1/extralife/network/
+  nand1/extralife/network/ExtraLifeNetwork.class
+  nand1/extralife/network/LivesPacketSender.class
+  nand1/extralife/network/S2CLivesSyncPacket.class
   pack.mcmeta

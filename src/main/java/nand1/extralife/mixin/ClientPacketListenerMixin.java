@@ -23,6 +23,7 @@ public class ClientPacketListenerMixin {
         System.out.println("[EXTRALIFE] ModifyArg CALLED");
         if (original instanceof DeathScreen ds) {
             System.out.println("[EXTRALIFE] DeathScreen replaced");
+
             if(ClientDataLives.getLives() > 0){
                 return new DeathScreen(ds.getTitle(), false);
             }else {

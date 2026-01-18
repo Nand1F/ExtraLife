@@ -6,6 +6,7 @@ import nand1.extralife.capability.HardcoreLivesProvider;
 import nand1.extralife.capability.IHardcoreLives;
 import nand1.extralife.commands.RegisterCommands;
 import nand1.extralife.config.ModConfigs;
+import nand1.extralife.network.ExtraLifeNetwork;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -25,6 +26,8 @@ public class ExtraLife {
         );
         MinecraftForge.EVENT_BUS.register(HardcoreLivesEvents.class);
         MinecraftForge.EVENT_BUS.register(RegisterCommands.class);
+
+        ExtraLifeNetwork.register();
 
     }
 

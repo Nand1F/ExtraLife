@@ -2,6 +2,9 @@ package nand1.extralife.capability;
 
 import nand1.extralife.config.ModConfigs;
 import nand1.extralife.data.ClientDataLives;
+import nand1.extralife.network.ExtraLifeNetwork;
+import nand1.extralife.network.LivesPacketSender;
+import nand1.extralife.network.S2CLivesSyncPacket;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -12,6 +15,7 @@ import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.network.PacketDistributor;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -51,12 +55,12 @@ public class HardcoreLivesEvents {
         player.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(lives -> {
             if (!hasJoinedBefore && lives.getLives() == 0) {
                 lives.setLives(ModConfigs.COMMON.hardcoreLives.get());
-                ClientDataLives.setLives(ModConfigs.COMMON.hardcoreLives.get());
+                LivesPacketSender.syncLivesTo(player, lives.getLives());
             }else if(hasJoinedBefore && lives.getLives() <=0){
                 player.setGameMode(GameType.SPECTATOR);
-                ClientDataLives.setLives(ModConfigs.COMMON.hardcoreLives.get());
+                LivesPacketSender.syncLivesTo(player, lives.getLives());
             }else {
-                ClientDataLives.setLives(lives.getLives());
+                LivesPacketSender.syncLivesTo(player, lives.getLives());
                 player.setGameMode(GameType.SURVIVAL);
             }
 
@@ -84,9 +88,11 @@ public class HardcoreLivesEvents {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
 
         player.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(lives -> {
-            ClientDataLives.removeLife();
-            lives.removeLife();
+            if (lives.getLives() > 0) {
+                lives.removeLife();
+            }
 
+            LivesPacketSender.syncLivesTo(player, lives.getLives());
 
             player.getServer().getPlayerList().broadcastSystemMessage(
                     Component.literal(
@@ -110,7 +116,7 @@ public class HardcoreLivesEvents {
         event.getOriginal().getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(oldCap -> {
             newPlayer.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(newCap -> {
                 newCap.setLives(oldCap.getLives());
-                ClientDataLives.setLives(oldCap.getLives());
+                LivesPacketSender.syncLivesTo(newPlayer, oldCap.getLives());
                 System.out.println("Cloned lives = " + newCap.getLives());
             });
         });

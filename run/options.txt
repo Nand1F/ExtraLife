@@ -72,7 +72,7 @@ tutorialStep:none
 mouseWheelSensitivity:1.0
 rawMouseInput:true
 glDebugVerbosity:1
-skipMultiplayerWarning:false
+skipMultiplayerWarning:true
 skipRealms32bitWarning:false
 hideMatchedNames:true
 joinedFirstServer:true
@@ -118,8 +118,8 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
-soundCategory_master:0.0
-soundCategory_music:1.0
+soundCategory_master:0.40728476821192056
+soundCategory_music:0.11619718309859155
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
