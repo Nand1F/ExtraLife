@@ -26,7 +26,7 @@ public class ExtraLife {
         );
         MinecraftForge.EVENT_BUS.register(HardcoreLivesEvents.class);
         MinecraftForge.EVENT_BUS.register(RegisterCommands.class);
-
+        //register network
         ExtraLifeNetwork.register();
 
     }
