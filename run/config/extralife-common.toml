@@ -1,6 +1,0 @@
-
-[hardcore]
-	#Amount of lives per player in hardcore mode
-	#Range: 1 ~ 100
-	lives = 3
-
