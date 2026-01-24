@@ -2,9 +2,8 @@ package nand1.extralife.network;
 
 import nand1.extralife.data.ClientDataLives;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 
-import java.util.function.Supplier;
 
 public class S2CLivesSyncPacket {
 
@@ -25,11 +24,11 @@ public class S2CLivesSyncPacket {
     }
 
     // Клієнт -> застосовує дані
-    public static void handle(S2CLivesSyncPacket msg, Supplier<NetworkEvent.Context> ctx) {
-        ctx.get().enqueueWork(() -> {
+    public static void handle(S2CLivesSyncPacket msg, CustomPayloadEvent.Context ctx ) {
+        ctx.enqueueWork(() -> {
             ClientDataLives.setLives(msg.lives);
         });
-        ctx.get().setPacketHandled(true);
+        ctx.setPacketHandled(true);
     }
 
 }

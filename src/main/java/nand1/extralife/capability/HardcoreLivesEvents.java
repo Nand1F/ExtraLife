@@ -27,7 +27,7 @@ public class HardcoreLivesEvents {
     public static void attachCaps(AttachCapabilitiesEvent<Entity> event) {
         if (event.getObject() instanceof ServerPlayer) {
             event.addCapability(
-                    ResourceLocation.fromNamespaceAndPath("extralife", "hardcore_lives"),
+                    new ResourceLocation("extralife", "hardcore_lives"),
                     new HardcoreLivesProvider()
             );
         }
