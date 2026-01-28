@@ -7,6 +7,7 @@ import nand1.extralife.network.LivesPacketSender;
 import nand1.extralife.network.S2CLivesSyncPacket;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.GameType;
@@ -36,6 +37,14 @@ public class HardcoreLivesEvents {
     @SubscribeEvent
     public static void onJoin(PlayerEvent.PlayerLoggedInEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
+        MinecraftServer mcServer = player.getServer();
+        if (mcServer == null || !mcServer.isHardcore()) {
+            ClientDataLives.setIsHardcore(false);
+            return;
+
+        }else {
+            ClientDataLives.setIsHardcore(true);
+        }
 
         var server = player.getServer();
         if (server == null) return;
@@ -86,6 +95,8 @@ public class HardcoreLivesEvents {
     @SubscribeEvent
     public static void onDeath(LivingDeathEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
+        MinecraftServer server = player.getServer();
+        if (server == null || !server.isHardcore()) return;
 
         player.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(lives -> {
             if (lives.getLives() > 0) {
@@ -109,19 +120,21 @@ public class HardcoreLivesEvents {
         if (!event.isWasDeath()) return;
         if (!(event.getEntity() instanceof ServerPlayer newPlayer)) return;
 
-        // ВАЖЛИВО: оживляємо caps у старого гравця
+        var server = newPlayer.getServer();
+        if (server == null || !server.isHardcore()) return; // ✅ перевірка хардкору
+
         event.getOriginal().reviveCaps();
-        System.out.println("has cap? " + event.getOriginal().getCapability(HardcoreLivesProvider.CAPABILITY).isPresent());
-
-        event.getOriginal().getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(oldCap -> {
-            newPlayer.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(newCap -> {
-                newCap.setLives(oldCap.getLives());
-                LivesPacketSender.syncLivesTo(newPlayer, oldCap.getLives());
-                System.out.println("Cloned lives = " + newCap.getLives());
+        try {
+            event.getOriginal().getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(oldCap -> {
+                newPlayer.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(newCap -> {
+                    newCap.setLives(oldCap.getLives());
+                    LivesPacketSender.syncLivesTo(newPlayer, oldCap.getLives());
+                    System.out.println("Cloned lives = " + newCap.getLives());
+                });
             });
-        });
-
-        // ВАЖЛИВО: знову інвалідовуємо caps, щоб не було витоків
-        event.getOriginal().invalidateCaps();
+        } finally {
+            event.getOriginal().invalidateCaps(); // ✅ гарантовано виконається
+        }
     }
+
 }
