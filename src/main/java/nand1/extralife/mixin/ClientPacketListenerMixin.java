@@ -22,14 +22,14 @@ public class ClientPacketListenerMixin {
     private Screen extralife$replaceDeathScreen(Screen original) {
         System.out.println("[EXTRALIFE] ModifyArg CALLED");
         if (original instanceof DeathScreen ds) {
-            System.out.println("[EXTRALIFE] DeathScreen replaced");
 
-            if(ClientDataLives.getLives() > 0){
-                return new DeathScreen(ds.getTitle(), false);
-            }else {
-                return new DeathScreen(ds.getTitle(), true);
+            if(ClientDataLives.getIsHardcore()) {
+                if(ClientDataLives.getLives() > 0){
+                    return new DeathScreen(ds.getTitle(), false);
+                }else {
+                    return new DeathScreen(ds.getTitle(), true);
+                }
             }
-
         }
         return original;
     }

@@ -23,4 +23,5 @@ public class HardcoreLives implements IHardcoreLives {
     public void removeLife() {
         lives--;
     }
+
 }

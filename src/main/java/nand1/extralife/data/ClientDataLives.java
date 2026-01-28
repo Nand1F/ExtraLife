@@ -6,6 +6,7 @@ public class ClientDataLives {
 
     private static int lives = 0;
     private  String name;
+    private static boolean isHardcore = false;
 
 
 
@@ -22,4 +23,13 @@ public class ClientDataLives {
     public static void removeLife() {
         lives--;
     }
+
+    public static boolean getIsHardcore() {
+        return isHardcore;
+    }
+
+    public static void setIsHardcore(boolean value) {
+        isHardcore = value;
+    }
+
 }

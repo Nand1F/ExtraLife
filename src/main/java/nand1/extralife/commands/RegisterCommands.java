@@ -8,6 +8,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.GameType;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -34,6 +35,18 @@ public class RegisterCommands {
 
                                                                             target.getCapability(HardcoreLivesProvider.CAPABILITY)
                                                                                     .ifPresent(lives -> {
+                                                                                        // первірка на хардкор
+                                                                                        MinecraftServer server = target.getServer();
+                                                                                        if (server == null || !server.isHardcore()) {
+                                                                                            target.sendSystemMessage(
+                                                                                                    Component.literal(
+                                                                                                            "The command is not available in normal survival mode."
+                                                                                                    )
+                                                                                            );
+                                                                                            return;
+                                                                                        }
+
+
                                                                                         lives.setLives(lives.getLives() + amount);
                                                                                         ClientDataLives.setLives(lives.getLives()+amount);
                                                                                         int total = lives.getLives() + amount;
@@ -48,10 +61,15 @@ public class RegisterCommands {
                                                                                         );
                                                                                     });
 
-                                                                            ctx.getSource().sendSuccess(
-                                                                                    () -> Component.literal("Lives added."),
-                                                                                    true
-                                                                            );
+                                                                            //Перевірка на хардкоре
+                                                                            MinecraftServer server = target.getServer();
+                                                                            if (server.isHardcore()) {
+                                                                                ctx.getSource().sendSuccess(
+                                                                                        () -> Component.literal("Lives added."),
+                                                                                        true
+                                                                                );
+                                                                            }
+
                                                                             return 1;
                                                                         })
                                                         )

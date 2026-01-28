@@ -24,6 +24,7 @@ public class ExtraLife {
                 ModConfig.Type.COMMON,
                 ModConfigs.COMMON_SPEC
         );
+
         MinecraftForge.EVENT_BUS.register(HardcoreLivesEvents.class);
         MinecraftForge.EVENT_BUS.register(RegisterCommands.class);
         //register network
