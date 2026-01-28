@@ -27,6 +27,7 @@ public class ServerGamePacketListenerImplMixin {
 
     private boolean redirectHardcoreRespawn(MinecraftServer server) {
         ServerPlayer player = ((ServerGamePacketListenerImpl)(Object)this).player;
+        if (server == null || !server.isHardcore()) return false;
 
         player.getCapability(HardcoreLivesProvider.CAPABILITY).ifPresent(lives ->
         player.sendSystemMessage(
